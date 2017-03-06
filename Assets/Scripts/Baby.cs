@@ -25,8 +25,7 @@ public class Baby : NetworkBehaviour {
 	void Update () {
 		
 	}
-	//This is broken needs fixing, Micheal needs to investigate this
-	/*
+
     void addFinding(Finding newFinding) {
         // Only server can make (and push) changes to the baby.
         if (!isServer) {
@@ -47,9 +46,9 @@ public class Baby : NetworkBehaviour {
 
         findings.Remove(oldFinding);
         Debug.Log("Finding removed from baby.");
-    }*/
-	/*
-    [SyncVar]
-    public List<Finding> findings;          // FIXME: This is public for testing only, it must be private after basic tests are completed.
-*/
+    }
+
+    [SerializeField]
+    public SyncList<Finding> findings;          // FIXME: This is public for testing only, it must be private after basic tests are completed.
+
 }
