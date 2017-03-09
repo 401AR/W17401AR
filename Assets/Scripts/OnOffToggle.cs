@@ -1,11 +1,13 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.UI;
+using System.Collections;
 
 public class OnOffToggle : MonoBehaviour {
-
+	public Button Apply;
 	// Use this for initialization
 	void Start () {
+		Button btn = Apply.GetComponent<Button> ();
+		btn.onClick.AddListener (TaskOnClick);
 		
 	}
 	
@@ -16,5 +18,9 @@ public class OnOffToggle : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
+	}
+
+	public void TaskOnClick(){
+		Debug.Log ("HI");
 	}
 }
