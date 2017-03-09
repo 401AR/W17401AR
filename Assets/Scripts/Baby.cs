@@ -14,21 +14,24 @@ using UnityEngine;
 
 using UnityEngine.Networking;
 
-public class Baby : NetworkBehaviour {
+public class Baby : NetworkBehaviour
+{
+    // Use this for initialization
+    void Start()
+    {
+    }
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    // Update is called once per frame
+    void Update()
+    {
 
-    void addFinding(Finding newFinding) {
+    }
+
+    public void addFinding(Finding newFinding)
+    {     //FIXME: This is public for testing only, it must be private after basic tests are completed.
         // Only server can make (and push) changes to the baby.
-        if (!isServer) {
+        if (!isServer)
+        {
             Debug.Log("Refused non-server attempt to addFinding.");
             return;
         }
@@ -37,15 +40,24 @@ public class Baby : NetworkBehaviour {
         Debug.Log("Finding added to baby.");
     }
 
-    void removeFinding(Finding oldFinding) {
+    public void removeFinding(Finding oldFinding)
+    {   //FIXME: This is public for testing only, it must be private after basic tests are completed.
         // Only server can make (and push) changes to the baby.
-        if (!isServer) {
+        if (!isServer)
+        {
             Debug.Log("Refused non-server attempt to removeFinding.");
             return;
         }
 
         findings.Remove(oldFinding);
         Debug.Log("Finding removed from baby.");
+    }
+
+    public int randomFunction()
+    {
+        //just a random function in here for testing
+        int number = 2;
+        return number;
     }
 
     [SerializeField]
