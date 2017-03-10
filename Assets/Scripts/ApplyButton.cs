@@ -19,7 +19,7 @@ public class ApplyButton : MonoBehaviour {
 	}
 
     public void TaskOnClick() {
-        Debug.Log("HI");
+        //Debug.Log("HI");
 
         SyncListFinding test = new SyncListFinding();
         test.position.Set(1.0f, 0.0f, 0.0f);
