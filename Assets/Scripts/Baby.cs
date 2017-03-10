@@ -61,4 +61,8 @@ public class Baby : NetworkBehaviour {
     [SerializeField]
     public SyncListString findings;          // FIXME: This is public for testing only, it must be private after basic tests are completed.
 
+    public int amountOfFindings()
+    {
+        return findings.Count;
+    }
 }
