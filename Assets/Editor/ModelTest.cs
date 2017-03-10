@@ -7,42 +7,44 @@ public class NewEditorTest
 {
     [Test]
     public void testCreateConn()
-        /*ensure connection is established*/
+    /*ensure connection is established*/
     {
-      
+
     }
 
 
     [Test]
     public void testGetAvailableTextures()
-        /*test that we get an updated current 
-         list of available textures*/
+    /*test that we get an updated current 
+     list of available textures*/
     {
 
     }
 
-    
+
 
     [Test]
     public void testAddFindingBaby()
     //test that findings ar being added to the baby
     {
         var testBaby = new Baby();
-     
 
-        var testFinding = new ColorFinding();
+        SyncListFinding testFinding1 = new SyncListFinding();
+        SyncListFinding testFinding2 = new SyncListFinding();
 
-        var testFinding2 = new TextureFinding();
+        string testFinding1String = JsonUtility.ToJson(testFinding1);
+        string testFinding2String = JsonUtility.ToJson(testFinding2);
 
-        testBaby.addFinding(testFinding);
+
+        testBaby.addFinding(testFinding1);
         testBaby.addFinding(testFinding2);
 
         var contentLength = testBaby.findings.Count;
 
-        Assert.True(testBaby.findings.Contains(testFinding), "Error, the baby does not contain TestFinding");
-        Assert.True(testBaby.findings.Contains(testFinding2), "Error, the baby does not contain TestFInding2");
+        Assert.True(testBaby.findings.Count==2, "Error, the baby does not contain TestFinding");
 
     }
+
 
 
     [Test]
@@ -51,15 +53,15 @@ public class NewEditorTest
     {
         var testBaby = new Baby();
 
-        var textureFinding = new TextureFinding();
+        SyncListFinding testFinding = new SyncListFinding();
+        string testFindingString = JsonUtility.ToJson(testFinding);
 
-        testBaby.addFinding(textureFinding);
+        testBaby.addFinding(testFinding);
 
-        Assert.True(testBaby.findings.Contains(textureFinding), "Error, baby does not contain expected finding");
+        Assert.True(testBaby.findings.Contains(testFindingString), "Error, baby does not contain expected finding");
 
-        testBaby.removeFinding(textureFinding);
+        testBaby.removeFinding(testFinding);
 
-        Assert.False(testBaby.findings.Contains(textureFinding), "Error, expected finding to be deleted");
+        Assert.False(testBaby.findings.Contains(testFindingString), "Error, expected finding to be deleted");
     }
-
 }
