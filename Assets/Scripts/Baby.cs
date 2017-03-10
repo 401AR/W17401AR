@@ -33,7 +33,8 @@ public class Baby : NetworkBehaviour {
 
     public void addFinding(SyncListFinding newFinding) {
         // Only server can make (and push) changes to the baby.
-        if (!Network.isServer) {
+        if (!isServer)
+        {
             Debug.Log("Refused non-server attempt to addFinding.");
             return;
         }
@@ -46,7 +47,7 @@ public class Baby : NetworkBehaviour {
 
     public void removeFinding(SyncListFinding oldFinding) {
         // Only server can make (and push) changes to the baby.
-        if (!Network.isServer) {
+        if (!isServer) {
             Debug.Log("Refused non-server attempt to removeFinding.");
             return;
         }
