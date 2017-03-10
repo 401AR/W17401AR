@@ -783,7 +783,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 691560456}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.81030875
+  m_Size: 0
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1358,7 +1358,7 @@ MonoBehaviour:
   m_NetworkPort: 7777
   m_ServerBindToIP: 0
   m_ServerBindAddress: 
-  m_NetworkAddress: 192.168.0.32
+  m_NetworkAddress: 172.31.11.197
   m_DontDestroyOnLoad: 0
   m_RunInBackground: 1
   m_ScriptCRCCheck: 1
@@ -2934,7 +2934,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 3497739}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.8081275
+  m_Size: 0
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
