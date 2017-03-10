@@ -26,29 +26,38 @@ public class Baby : NetworkBehaviour {
 		
 	}
 
-    void addFinding(Finding newFinding) {
+    void Awake()
+    {
+        findings = new SyncListString();
+    }
+
+    public void addFinding(SyncListFinding newFinding) {
         // Only server can make (and push) changes to the baby.
-        if (!isServer) {
+        if (!Network.isServer) {
             Debug.Log("Refused non-server attempt to addFinding.");
             return;
         }
 
-        findings.Add(newFinding);
+        string findingJson = JsonUtility.ToJson(newFinding);
+        
+        findings.Add(findingJson);
         Debug.Log("Finding added to baby.");
     }
 
-    void removeFinding(Finding oldFinding) {
+    public void removeFinding(SyncListFinding oldFinding) {
         // Only server can make (and push) changes to the baby.
-        if (!isServer) {
+        if (!Network.isServer) {
             Debug.Log("Refused non-server attempt to removeFinding.");
             return;
         }
 
-        findings.Remove(oldFinding);
+        string findingJson = JsonUtility.ToJson(oldFinding);
+
+        findings.Remove(findingJson);
         Debug.Log("Finding removed from baby.");
     }
 
     [SerializeField]
-    public SyncList<Finding> findings;          // FIXME: This is public for testing only, it must be private after basic tests are completed.
+    public SyncListString findings;          // FIXME: This is public for testing only, it must be private after basic tests are completed.
 
 }

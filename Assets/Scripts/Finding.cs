@@ -3,26 +3,20 @@
  * Course: CMPUT401 AR
  * File: Finding.cs
  * 
- * Description: Base class extended by ColorFinding and TextureFinding.
- * Allows storage of all findings under one collection.
+ * Description: Base class that can hold data for any Finding.  To simplify
+ * use with SyncList.
  * 
  * ***************************************************************************/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Finding : MonoBehaviour {
+[System.Serializable]
+public class SyncListFinding {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public Vector3 position;
+    public int size;
 
-    private Vector3 position;
-    private int size;           // TODO: int may not be sufficient for sizing.
+    // TODO: Private variables regarding texture go here.
+    private Color tint;     // Tint to apply to baby skin color.
 }
