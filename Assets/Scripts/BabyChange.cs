@@ -19,10 +19,10 @@ public class BabyChange : MonoBehaviour {
 
     public void ChangeColor()
     {
-        if (baby.amountOfFindings() != currentColour)
+        if (baby.totalFindings() != currentColour)
         {
             GetComponent<Renderer>().material.color = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
-            currentColour = baby.amountOfFindings();
+            currentColour = baby.totalFindings();
         }
     }
 }

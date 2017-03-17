@@ -25,11 +25,11 @@ public class ApplyButton : MonoBehaviour {
         test.position.Set(1.0f, 0.0f, 0.0f);
 
         Debug.Log(baby);
-        baby.addFinding(test);
+        baby.addFinding(test, Location.core);
 
         Debug.Log(JsonUtility.ToJson(test));
 
-        Debug.Log(baby.findings.Count);
+        Debug.Log(baby.totalFindings());
     }
 
 }

@@ -36,12 +36,12 @@ public class NewEditorTest
         string testFinding2String = JsonUtility.ToJson(testFinding2);
 
 
-        testBaby.addFinding(testFinding1);
-        testBaby.addFinding(testFinding2);
+        testBaby.addFinding(testFinding1, Location.core);
+        testBaby.addFinding(testFinding2, Location.extremity);
 
-        var contentLength = testBaby.findings.Count;
+        var contentLength = testBaby.totalFindings();
 
-        Assert.True(testBaby.findings.Count==2, "Error, the baby does not contain TestFinding");
+        Assert.True(testBaby.totalFindings()==2, "Error, the baby does not contain TestFinding");
 
     }
 
@@ -56,12 +56,12 @@ public class NewEditorTest
         SyncListFinding testFinding = new SyncListFinding();
         string testFindingString = JsonUtility.ToJson(testFinding);
 
-        testBaby.addFinding(testFinding);
+        testBaby.addFinding(testFinding, Location.core);
 
-        Assert.True(testBaby.findings.Contains(testFindingString), "Error, baby does not contain expected finding");
+        Assert.True(testBaby.findingContains(testFindingString, Location.core), "Error, baby does not contain expected finding");
 
-        testBaby.removeFinding(testFinding);
+        testBaby.removeFinding(testFinding, Location.core);
 
-        Assert.False(testBaby.findings.Contains(testFindingString), "Error, expected finding to be deleted");
+        Assert.False(testBaby.findingContains(testFindingString, Location.core), "Error, expected finding to be deleted");
     }
 }

@@ -5,11 +5,11 @@ using UnityEngine.Networking;
 using UnityEngine.UI;
 
 public class JoinServerButton : MonoBehaviour {
-    public Button JoinServer;
+    public Button Join;
 
     // Use this for initialization
     void Start () {
-        Button btn = JoinServer.GetComponent<Button>();
+        Button btn = Join.GetComponent<Button>();
         btn.onClick.AddListener(TaskOnClick);
     }
 	

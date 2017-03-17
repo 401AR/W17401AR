@@ -14,10 +14,22 @@ using UnityEngine;
 
 using UnityEngine.Networking;
 
+public enum Location
+{
+    core = 0,
+    extremity = 1
+};
+
 public class Baby : NetworkBehaviour {
 
-	// Use this for initialization
-	void Start () {
+    [SerializeField]
+    public SyncListString coreFindings;             // FIXME: This is public for testing only, it must be private after basic tests are completed.
+
+    [SerializeField]
+    public SyncListString extremityFindings;        // FIXME: This is public for testing only, it must be private after basic tests are completed.
+
+                                                    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -28,10 +40,11 @@ public class Baby : NetworkBehaviour {
 
     void Awake()
     {
-        findings = new SyncListString();
+        coreFindings = new SyncListString();
+        extremityFindings = new SyncListString();
     }
 
-    public void addFinding(SyncListFinding newFinding) {
+    public void addFinding(SyncListFinding newFinding, Location location) {
         // Only server can make (and push) changes to the baby.
         if (!isServer)
         {
@@ -41,11 +54,23 @@ public class Baby : NetworkBehaviour {
 
         string findingJson = JsonUtility.ToJson(newFinding);
         
-        findings.Add(findingJson);
+        switch(location)
+        {
+            case Location.core:
+                coreFindings.Add(findingJson);
+                break;
+            case Location.extremity:
+                extremityFindings.Add(findingJson);
+                break;
+            default:
+                Debug.Log("Bad location type was specified.  Rejecting finding.");
+                break;
+        }
+
         Debug.Log("Finding added to baby.");
     }
 
-    public void removeFinding(SyncListFinding oldFinding) {
+    public void removeFinding(SyncListFinding oldFinding, Location location) {
         // Only server can make (and push) changes to the baby.
         if (!isServer) {
             Debug.Log("Refused non-server attempt to removeFinding.");
@@ -54,15 +79,81 @@ public class Baby : NetworkBehaviour {
 
         string findingJson = JsonUtility.ToJson(oldFinding);
 
-        findings.Remove(findingJson);
+        switch (location)
+        {
+            case Location.core:
+                coreFindings.Add(findingJson);
+                break;
+            case Location.extremity:
+                extremityFindings.Add(findingJson);
+                break;
+            default:
+                Debug.Log("Bad location type was specified.  Rejected deletion of finding.");
+                break;
+        }
+        
         Debug.Log("Finding removed from baby.");
     }
-
-    [SerializeField]
-    public SyncListString findings;          // FIXME: This is public for testing only, it must be private after basic tests are completed.
-
-    public int amountOfFindings()
-    {
-        return findings.Count;
+    
+    public void clearFindings(Location location) {
+        switch (location)
+        {
+            case Location.core:
+                coreFindings.Clear();
+                Debug.Log("Core Findings cleared");
+                break;
+            case Location.extremity:
+                extremityFindings.Clear();
+                Debug.Log("Extremity Findings cleared");
+                break;
+            default:
+                Debug.Log("Bad location type was specified.  Rejected clearing findings.");
+                break;
+        }
     }
+
+    public void clearAllFindings() {
+        clearFindings(Location.core);
+        clearFindings(Location.extremity);
+    }
+
+    public bool findingContains(string finding, Location location)
+    {
+        bool contains = false;
+
+        switch (location)
+        {
+            case Location.core:
+                contains = coreFindings.Contains(finding);
+                break;
+            case Location.extremity:
+                contains = extremityFindings.Contains(finding);
+                break;
+        }
+
+        return contains;
+    }
+
+    public int totalFindings(Location location)
+    {
+        int count = -1;
+
+        switch (location)
+        {
+            case Location.core:
+                count = coreFindings.Count;
+                break;
+            case Location.extremity:
+                count = extremityFindings.Count;
+                break;
+            default:
+                Debug.Log("Bad location type was specified.  Rejected count of findings.");
+                break;
+        }
+
+        return count;
+    }
+
+    public int totalFindings() { return (totalFindings(Location.core) + totalFindings(Location.extremity)); }
+
 }
