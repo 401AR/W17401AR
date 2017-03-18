@@ -5,6 +5,7 @@ using UnityEngine.Networking;
 using UnityEngine.UI;
 
 public class JoinServerButton : MonoBehaviour {
+    public ARNetworkManager network;
     public Button Join;
 
     // Use this for initialization
@@ -15,8 +16,8 @@ public class JoinServerButton : MonoBehaviour {
 	
     public void TaskOnClick() {
         Debug.Log("Starting client...");
-        NetworkManager.singleton.StartClient();
-        Debug.Log("Attempting to connect to " + NetworkManager.singleton.networkAddress + " : " + NetworkManager.singleton.networkPort);
+        network.JoinGame();
+        Debug.Log("Attempting to connect to " + network.networkAddress + " : " + network.networkPort);
     }
 
 }

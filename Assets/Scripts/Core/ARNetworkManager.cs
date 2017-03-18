@@ -6,32 +6,29 @@ using System;
 
 public class ARNetworkManager : NetworkManager
 {
-    public void StartupHost()
-    {
+    public void StartupHost() {
         SetPort();
-        //SetName();
         Debug.Log("Server running on port: " + singleton.networkPort);
         singleton.StartHost();
     }
 
-    public void JoinGame()
-    {
+    public void JoinGame() {
         SetIPAddress();
         SetPort();
-        //SetName();
         Debug.Log("Attempting to connect to " + singleton.networkAddress + " : " + singleton.networkPort);
         singleton.StartClient();
     }
 
-    private void SetIPAddress()
-    {
-        string ipAddress = GameObject.Find("InputFieldIPAddress").transform.FindChild("Text").GetComponent<Text>().text;
+    protected void SetIPAddress() {
+        IniHandler ini = new IniHandler();
+        string ipAddress = ini.read("config.ini", "Server", "IP", "localhost");
         singleton.networkAddress = ipAddress;
     }
 
-    private void SetPort()
-    {
-        singleton.networkPort = 7777;
+    protected void SetPort() {
+        IniHandler ini = new IniHandler();
+        string port = ini.read("config.ini", "Server", "Port", "7777");
+        singleton.networkPort = int.Parse(port);
     }
 
 }

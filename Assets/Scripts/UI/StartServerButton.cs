@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.Networking;
 
 public class StartServerButton : MonoBehaviour {
+    public ARNetworkManager network;
     public Button StartServer;
 
     // Use this for initialization
@@ -15,8 +16,8 @@ public class StartServerButton : MonoBehaviour {
 	
     public void TaskOnClick() {
         Debug.Log("Starting server...");
-        NetworkManager.singleton.StartServer();
-        Debug.Log("Server running on port: " + NetworkManager.singleton.networkPort);
+        network.StartupHost();
+        Debug.Log("Server running on port: " + network.networkPort);
     }
 
 }
