@@ -6,6 +6,8 @@
  * Description: Wraps NetworkManager and adds functions for handling loading
  * Server information from INI.
  * 
+ * Credits: 
+ * INI Handling credited: https://www.assetstore.unity3d.com/en/#!/content/23706 
  * ***************************************************************************/
 using UnityEngine;
 using System.Collections;
@@ -15,6 +17,8 @@ using System;
 
 public class ARNetworkManager : NetworkManager
 {
+    public TextAsset iniFile;
+
     // FIXME: Correct to StartupServer.
     public void StartupHost() {
         SetPort();
@@ -30,15 +34,42 @@ public class ARNetworkManager : NetworkManager
     }
 
     protected void SetIPAddress() {
-        IniHandler ini = new IniHandler();
-        string ipAddress = ini.read("config.ini", "Server", "IP", "localhost");
+        string ipAddress = readIni("Server", "IP", "localhost");
         singleton.networkAddress = ipAddress;
     }
 
     protected void SetPort() {
-        IniHandler ini = new IniHandler();
-        string port = ini.read("config.ini", "Server", "Port", "7777");
+        string port = readIni("Server", "Port", "7777");
         singleton.networkPort = int.Parse(port);
+    }
+
+    // [FILE] must be provided without extension.
+    // Write [VALUE] to [FILE], under [SECTION], at the entry identifed with [KEY]
+    // Credit: https://www.assetstore.unity3d.com/en/#!/content/23706 
+    public void writeIni(string section, string key, string value)
+    {
+        INIParser ini = new INIParser();
+
+        ini.Open(iniFile);
+        ini.WriteValue(section, key, value);
+        ini.Close();
+
+        Debug.Log("Wrote value: '" + value + "' " + section + ", " + key);
+        return;
+    }
+
+    // Read [VALUE] from [FILE], under [SECTION], at the entry identifed with [KEY].  If no value can be read, return [DEFAULTVALUE].
+    // Credit: https://www.assetstore.unity3d.com/en/#!/content/23706 
+    public string readIni(string section, string key, string defaultValue)
+    {
+        INIParser ini = new INIParser();
+
+        ini.Open(iniFile);
+        string value = ini.ReadValue(section, key, defaultValue);
+        ini.Close();
+
+        Debug.Log("Received value: '" + value + "' from " + section + ", " + key);
+        return value;
     }
 
 }

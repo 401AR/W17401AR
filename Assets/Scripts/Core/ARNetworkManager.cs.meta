@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 366334589811d4646ae9c9a3bab94102
-timeCreated: 1489817912
+timeCreated: 1489868308
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
@@ -8,6 +8,7 @@ MonoImporter:
   - m_PlayerPrefab: {fileID: 1724858067820592, guid: 628af0ad52fb34f45a43be3c9f5c5720,
       type: 2}
   - matchMaker: {instanceID: 0}
+  - iniFile: {fileID: 4900000, guid: 985bb0bd5059ac34987b813dac9952cf, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
