@@ -11,9 +11,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 using UnityEngine.Networking;
 
+
+// Add one for each location listbox.
 public enum Location
 {
     core = 0,
@@ -44,6 +45,7 @@ public class Baby : NetworkBehaviour {
         extremityFindings = new SyncListString();
     }
 
+    // Apply a new finding to the Baby.
     public void addFinding(SyncListFinding newFinding, Location location) {
         // Only server can make (and push) changes to the baby.
         if (!isServer)
@@ -70,6 +72,7 @@ public class Baby : NetworkBehaviour {
         Debug.Log("Finding added to baby.");
     }
 
+    // Remove a specific finding from the baby.
     public void removeFinding(SyncListFinding oldFinding, Location location) {
         // Only server can make (and push) changes to the baby.
         if (!isServer) {
@@ -95,6 +98,7 @@ public class Baby : NetworkBehaviour {
         Debug.Log("Finding removed from baby.");
     }
     
+    // Remove all objects in a particular location from the baby.
     public void clearFindings(Location location) {
         switch (location)
         {
@@ -112,11 +116,13 @@ public class Baby : NetworkBehaviour {
         }
     }
 
+    // Remove all findings from the baby.
     public void clearAllFindings() {
         clearFindings(Location.core);
         clearFindings(Location.extremity);
     }
 
+    // Check a specific finding is in a specific location.
     public bool findingContains(string finding, Location location)
     {
         bool contains = false;
@@ -134,6 +140,7 @@ public class Baby : NetworkBehaviour {
         return contains;
     }
 
+    // Get total number of findings in a specific location.
     public int totalFindings(Location location)
     {
         int count = -1;
@@ -154,6 +161,7 @@ public class Baby : NetworkBehaviour {
         return count;
     }
 
+    // Get total number of findings across all locations.
     public int totalFindings() { return (totalFindings(Location.core) + totalFindings(Location.extremity)); }
 
 }

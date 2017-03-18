@@ -1,4 +1,12 @@
-﻿using System.Collections;
+﻿/******************************************************************************
+ * Author: Michael Morris
+ * Course: CMPUT401 AR
+ * File: StartServerButton.cs
+ * 
+ * Description: Handles onClick event for Start Server button.
+ * 
+ * ***************************************************************************/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -14,6 +22,7 @@ public class StartServerButton : MonoBehaviour {
         btn.onClick.AddListener(TaskOnClick);
     }
 	
+    // Handle on click event
     public void TaskOnClick() {
         Debug.Log("Starting server...");
         network.StartupHost();

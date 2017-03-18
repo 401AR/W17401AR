@@ -1,4 +1,13 @@
-﻿using UnityEngine;
+﻿/******************************************************************************
+ * Author: Michael Morris
+ * Course: CMPUT401 AR
+ * File: ARNetworkManager.cs
+ * 
+ * Description: Wraps NetworkManager and adds functions for handling loading
+ * Server information from INI.
+ * 
+ * ***************************************************************************/
+using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.Networking;
@@ -6,6 +15,7 @@ using System;
 
 public class ARNetworkManager : NetworkManager
 {
+    // FIXME: Correct to StartupServer.
     public void StartupHost() {
         SetPort();
         Debug.Log("Server running on port: " + singleton.networkPort);

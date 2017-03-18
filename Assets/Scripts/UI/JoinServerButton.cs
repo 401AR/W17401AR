@@ -1,4 +1,12 @@
-﻿using System.Collections;
+﻿/******************************************************************************
+ * Author: Michael Morris
+ * Course: CMPUT401 AR
+ * File: JoinServerButton.cs
+ * 
+ * Description: Handles onClick event for Join Server button.
+ * 
+ * ***************************************************************************/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
@@ -14,6 +22,7 @@ public class JoinServerButton : MonoBehaviour {
         btn.onClick.AddListener(TaskOnClick);
     }
 	
+    // OnClick event handler
     public void TaskOnClick() {
         Debug.Log("Starting client...");
         network.JoinGame();

@@ -18,7 +18,8 @@ public class NewEditorTest
     /*test that we get an updated current 
      list of available textures*/
     {
-
+        // No current implementation.
+        Assert.True(false);
     }
 
 
@@ -44,9 +45,7 @@ public class NewEditorTest
         Assert.True(testBaby.totalFindings()==2, "Error, the baby does not contain TestFinding");
 
     }
-
-
-
+    
     [Test]
     public void testRemoveFindings()
     //test that findings are being removed 

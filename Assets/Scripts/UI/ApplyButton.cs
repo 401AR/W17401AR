@@ -1,4 +1,12 @@
-﻿using System.Collections;
+﻿/******************************************************************************
+ * Author: Michael Morris
+ * Course: CMPUT401 AR
+ * File: ApplyButton.cs
+ * 
+ * Description: Handles onClick event for Apply button.
+ * 
+ * ***************************************************************************/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,14 +21,8 @@ public class ApplyButton : MonoBehaviour {
         btn.onClick.AddListener(TaskOnClick);
     }
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
+    // On click event handler
     public void TaskOnClick() {
-        //Debug.Log("HI");
-
         SyncListFinding test = new SyncListFinding();
         test.position.Set(1.0f, 0.0f, 0.0f);
 
@@ -28,7 +30,6 @@ public class ApplyButton : MonoBehaviour {
         baby.addFinding(test, Location.core);
 
         Debug.Log(JsonUtility.ToJson(test));
-
         Debug.Log(baby.totalFindings());
     }
 
