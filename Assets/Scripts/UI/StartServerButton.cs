@@ -25,7 +25,7 @@ public class StartServerButton : MonoBehaviour {
     // Handle on click event
     public void TaskOnClick() {
         Debug.Log("Starting server...");
-        network.StartupHost();
+        network.PreStartServer();
         Debug.Log("Server running on port: " + network.networkPort);
     }
 

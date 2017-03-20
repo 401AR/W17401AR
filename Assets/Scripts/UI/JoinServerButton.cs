@@ -25,7 +25,7 @@ public class JoinServerButton : MonoBehaviour {
     // OnClick event handler
     public void TaskOnClick() {
         Debug.Log("Starting client...");
-        network.JoinGame();
+        network.PreJoinServer();
         Debug.Log("Attempting to connect to " + network.networkAddress + " : " + network.networkPort);
     }
 
