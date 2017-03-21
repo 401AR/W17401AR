@@ -10,13 +10,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using SimpleSQL;
 
 [System.Serializable]
 public class SyncListFinding {
+    [PrimaryKey]
+    public int id;
 
+    [Indexed, MaxLength(60), NotNull]
+    public string name;
+
+    public string colorJson;
+    public string texturePath;
+
+    // Tracking vars.
     public Vector3 position;
     public int size;
 
-    // TODO: Private variables regarding texture go here.
-    private Color tint;     // Tint to apply to baby skin color.
+
+    public Color getColor() {
+        return JsonUtility.FromJson<Color>(colorJson);
+    }
+
 }
