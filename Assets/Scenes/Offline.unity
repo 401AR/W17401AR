@@ -1094,6 +1094,7 @@ GameObject:
   - component: {fileID: 1151494616}
   - component: {fileID: 1151494615}
   - component: {fileID: 1151494618}
+  - component: {fileID: 1151494619}
   m_Layer: 5
   m_Name: Start Server
   m_TagString: Untagged
@@ -1207,6 +1208,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   network: {fileID: 1467306624}
   StartServer: {fileID: 1151494615}
+--- !u!114 &1151494619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1151494613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1e1a7af4a329dc439168311031f5797, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  start: {fileID: 1151494615}
 --- !u!1 &1167758054
 GameObject:
   m_ObjectHideFlags: 0
