@@ -17,7 +17,7 @@ using UnityEngine.UI;
 using UnityEngine.Networking;
 
 public class ConnectionTester : MonoBehaviour {
-    public UnityEngine.UI.Text text;
+    public UnityEngine.UI.Text testResults;
     public float pingTimeout;
 
     private static ConnectionTester _instance = null;
