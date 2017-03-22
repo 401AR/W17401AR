@@ -12,7 +12,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
-
+using UnityEngine.Events;
 
 // Add one for each location listbox.
 public enum Location
@@ -22,14 +22,14 @@ public enum Location
 };
 
 public class Baby : NetworkBehaviour {
+    public UnityEvent onClientFindingsChanged;      // Used to sync changes visually with clients.
 
     [SerializeField]
     public SyncListString coreFindings;             // FIXME: This is public for testing only, it must be private after basic tests are completed.
 
     [SerializeField]
     public SyncListString extremityFindings;        // FIXME: This is public for testing only, it must be private after basic tests are completed.
-
-                                                    // Use this for initialization
+    
     void Start () {
 		
 	}
@@ -39,8 +39,7 @@ public class Baby : NetworkBehaviour {
 		
 	}
 
-    void Awake()
-    {
+    void Awake()  {
         coreFindings = new SyncListString();
         extremityFindings = new SyncListString();
     }
@@ -48,8 +47,7 @@ public class Baby : NetworkBehaviour {
     // Apply a new finding to the Baby.
     public void addFinding(SyncListFinding newFinding, Location location) {
         // Only server can make (and push) changes to the baby.
-        if (!isServer)
-        {
+        if (!isServer) {
             Debug.Log("Refused non-server attempt to addFinding.");
             return;
         }
@@ -70,6 +68,7 @@ public class Baby : NetworkBehaviour {
         }
 
         Debug.Log("Finding added to baby.");
+        onClientFindingsChanged.Invoke();
     }
 
     // Remove a specific finding from the baby.
@@ -96,6 +95,7 @@ public class Baby : NetworkBehaviour {
         }
         
         Debug.Log("Finding removed from baby.");
+        onClientFindingsChanged.Invoke();
     }
     
     // Remove all objects in a particular location from the baby.
@@ -114,12 +114,16 @@ public class Baby : NetworkBehaviour {
                 Debug.Log("Bad location type was specified.  Rejected clearing findings.");
                 break;
         }
+
+        onClientFindingsChanged.Invoke();
     }
 
     // Remove all findings from the baby.
     public void clearAllFindings() {
         clearFindings(Location.core);
         clearFindings(Location.extremity);
+
+        // Client update is called within each clearFindings.
     }
 
     // Check a specific finding is in a specific location.

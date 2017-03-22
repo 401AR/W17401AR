@@ -34,8 +34,7 @@ public class SkinToneController : MonoBehaviour
         //	  instantiate prefab, 
         //	  set the data, 
         //	  add it to panel
-        foreach (SyncListFinding color in colors)
-        {
+        foreach (SyncListFinding color in colors) {
             GameObject newColor = Instantiate(ListItemPrefab) as GameObject;
             SlotItem controller = newColor.GetComponent<SlotItem>() as SlotItem;
             controller.Preview.color = color.getColor();
