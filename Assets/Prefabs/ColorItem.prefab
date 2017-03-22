@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 222116145773536554}
   - component: {fileID: 114023468529379712}
   - component: {fileID: 114658547914574278}
+  - component: {fileID: 114967332481395790}
   m_Layer: 5
   m_Name: ColorItem
   m_TagString: Untagged
@@ -168,6 +169,19 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114967332481395790
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1200814240158750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c2adf961b9e84c4598075d3fc6cf212, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Preview: {fileID: 114849057718415176}
+  Name: {fileID: 114428409585110400}
 --- !u!222 &222116145773536554
 CanvasRenderer:
   m_ObjectHideFlags: 1

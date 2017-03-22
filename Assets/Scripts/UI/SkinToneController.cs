@@ -4,7 +4,7 @@
  * File: SkinToneController.cs
  * 
  * Description: Provides handling of dynamic content for SkinToneController.
- * 
+ * Credits: http://www.folio3.com/blog/creating-dynamic-scrollable-lists-with-new-unity-canvas-ui/
  * ***************************************************************************/
 using System.Collections;
 using System.Collections.Generic;
@@ -22,10 +22,11 @@ public class SkinToneController : MonoBehaviour
     {
 
         populate();
- 
+
     }
 
-    public void populate() {
+    public void populate()
+    {
 
         colors = dbHandler.getColors();
 
@@ -36,10 +37,11 @@ public class SkinToneController : MonoBehaviour
         foreach (SyncListFinding color in colors)
         {
             GameObject newColor = Instantiate(ListItemPrefab) as GameObject;
-            SkinToneItem controller = newColor.GetComponent<SkinToneItem>();
+            SkinToneItem controller = newColor.GetComponent<SkinToneItem>() as SkinToneItem;
             controller.Preview.color = color.getColor();
             controller.Name.text = color.name;
-            newColor.transform.parent = ContentPanel.transform;
+            //newColor.transform.parent = ContentPanel.transform;
+            newColor.transform.SetParent(ContentPanel.transform, false);
             newColor.transform.localScale = Vector3.one;
             Debug.Log("Added color: Name: " + color.name + " Color: " + color.getColor().ToString());
         }
