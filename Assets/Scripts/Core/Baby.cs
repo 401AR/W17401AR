@@ -22,60 +22,68 @@ public enum Location
 };
 
 public class Baby : NetworkBehaviour {
-    public UnityEvent onClientFindingsChanged;      // Used to sync changes visually with clients.
-
+    
     [SerializeField]
     public SyncListString coreFindings;             // FIXME: This is public for testing only, it must be private after basic tests are completed.
 
     [SerializeField]
     public SyncListString extremityFindings;        // FIXME: This is public for testing only, it must be private after basic tests are completed.
-    
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+    // Override client instantiation to add hooks for finding updates.
+    public override void OnStartClient() {
+        coreFindings.Callback = onChangeFindings;
+        extremityFindings.Callback = onChangeFindings;
+        base.OnStartClient();
+    }
 
     void Awake()  {
         coreFindings = new SyncListString();
         extremityFindings = new SyncListString();
     }
 
+    public void onChangeFindings(SyncListString.Operation op, int index) {
+        /*if (isServer) {
+            Debug.Log("Refused server attempt to update client UI.");
+            return;
+        }*/
+
+        Debug.Log("UPDATE BABY AR HERE");
+
+        printFindings();
+    }
+
     // Apply a new finding to the Baby.
     public void addFinding(SyncListFinding newFinding, Location location) {
         // Only server can make (and push) changes to the baby.
         if (!isServer) {
-            Debug.Log("Refused non-server attempt to addFinding.");
+            Debug.LogError("Refused non-server attempt to addFinding.");
             return;
         }
 
         string findingJson = JsonUtility.ToJson(newFinding);
-        
+
         switch(location)
         {
             case Location.core:
                 coreFindings.Add(findingJson);
+                
                 break;
             case Location.extremity:
                 extremityFindings.Add(findingJson);
                 break;
             default:
-                Debug.Log("Bad location type was specified.  Rejecting finding.");
+                Debug.LogError("Bad location type was specified.  Rejecting finding.");
                 break;
         }
 
         Debug.Log("Finding added to baby.");
-        onClientFindingsChanged.Invoke();
     }
 
     // Remove a specific finding from the baby.
     public void removeFinding(SyncListFinding oldFinding, Location location) {
         // Only server can make (and push) changes to the baby.
         if (!isServer) {
-            Debug.Log("Refused non-server attempt to removeFinding.");
+            Debug.LogError("Refused non-server attempt to removeFinding.");
             return;
         }
 
@@ -90,16 +98,21 @@ public class Baby : NetworkBehaviour {
                 extremityFindings.Add(findingJson);
                 break;
             default:
-                Debug.Log("Bad location type was specified.  Rejected deletion of finding.");
+                Debug.LogError("Bad location type was specified.  Rejected deletion of finding.");
                 break;
         }
-        
+
         Debug.Log("Finding removed from baby.");
-        onClientFindingsChanged.Invoke();
     }
     
     // Remove all objects in a particular location from the baby.
     public void clearFindings(Location location) {
+        // Only server can make (and push) changes to the baby.
+        if (!isServer) {
+            Debug.Log("Refused non-server attempt to clear Findings.");
+            return;
+        }
+
         switch (location)
         {
             case Location.core:
@@ -111,11 +124,11 @@ public class Baby : NetworkBehaviour {
                 Debug.Log("Extremity Findings cleared");
                 break;
             default:
-                Debug.Log("Bad location type was specified.  Rejected clearing findings.");
+                Debug.LogError("Bad location type was specified.  Rejected clearing findings.");
                 break;
         }
 
-        onClientFindingsChanged.Invoke();
+        Debug.Log("Findings cleared from baby.");
     }
 
     // Remove all findings from the baby.
@@ -158,7 +171,7 @@ public class Baby : NetworkBehaviour {
                 count = extremityFindings.Count;
                 break;
             default:
-                Debug.Log("Bad location type was specified.  Rejected count of findings.");
+                Debug.LogError("Bad location type was specified.  Rejected count of findings.");
                 break;
         }
 
@@ -168,4 +181,18 @@ public class Baby : NetworkBehaviour {
     // Get total number of findings across all locations.
     public int totalFindings() { return (totalFindings(Location.core) + totalFindings(Location.extremity)); }
 
+    protected void printFindings() {
+
+        Debug.Log("Core Findings: ");
+        foreach (string finding in coreFindings) {
+            Debug.Log(finding);
+        }
+
+        Debug.Log("Extremity Findings: ");
+        foreach (string finding in extremityFindings) {
+            Debug.Log(finding);
+        }
+
+        return;
+    }
 }
