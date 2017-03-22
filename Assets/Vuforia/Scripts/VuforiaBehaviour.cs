@@ -18,11 +18,19 @@ namespace Vuforia
     {
         protected override void Awake()
         {
-            AddOSSpecificExternalDatasetSearchDirs();
+            if (SystemInfo.operatingSystemFamily == OperatingSystemFamily.Windows ||
+                SystemInfo.operatingSystemFamily == OperatingSystemFamily.MacOSX)
+            {
+                Debug.Log("Operator");
+            }
+            else
+            {
+                AddOSSpecificExternalDatasetSearchDirs();
 
-            gameObject.AddComponent<ComponentFactoryStarterBehaviour>();
+                gameObject.AddComponent<ComponentFactoryStarterBehaviour>();
 
-            base.Awake();
+                base.Awake();
+            }
         }
 
         private static VuforiaBehaviour mVuforiaBehaviour= null;

@@ -35,9 +35,17 @@ namespace Vuforia
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
         private static void InitVuforia()
         {
-            if(!VuforiaConfiguration.Instance.Vuforia.DelayedInitialization)
+            if (SystemInfo.operatingSystemFamily == OperatingSystemFamily.Windows ||
+                SystemInfo.operatingSystemFamily == OperatingSystemFamily.MacOSX)
             {
-                VuforiaRuntime.Instance.InitVuforia();
+                Debug.Log("Operator");
+            }
+            else
+            {
+                if (!VuforiaConfiguration.Instance.Vuforia.DelayedInitialization)
+                {
+                    VuforiaRuntime.Instance.InitVuforia();
+                }
             }
         }
 
