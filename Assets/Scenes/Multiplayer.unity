@@ -2577,6 +2577,7 @@ GameObject:
   - component: {fileID: 967925987}
   - component: {fileID: 967925986}
   - component: {fileID: 967925985}
+  - component: {fileID: 967925988}
   m_Layer: 5
   m_Name: Viewport
   m_TagString: Untagged
@@ -2648,6 +2649,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ShowMaskGraphic: 0
+--- !u!114 &967925988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 967925983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2df8acca999fd74b8109299c9fda50e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dbHandler: {fileID: 313750456}
+  ContentPanel: {fileID: 1286139791}
+  ListItemPrefab: {fileID: 1200814240158750, guid: bbc26797e9eeb6b47aa5eacc992d4d7f,
+    type: 2}
 --- !u!1 &978626168
 GameObject:
   m_ObjectHideFlags: 0
@@ -4190,6 +4206,7 @@ GameObject:
   - component: {fileID: 1683170896}
   - component: {fileID: 1683170895}
   - component: {fileID: 1683170894}
+  - component: {fileID: 1683170897}
   m_Layer: 5
   m_Name: Viewport
   m_TagString: Untagged
@@ -4261,6 +4278,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ShowMaskGraphic: 0
+--- !u!114 &1683170897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1683170892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2627fb1c58e4a74baf7d35fce1b99ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dbHandler: {fileID: 313750456}
+  ContentPanel: {fileID: 638570353}
+  ListItemPrefab: {fileID: 1200814240158750, guid: bbc26797e9eeb6b47aa5eacc992d4d7f,
+    type: 2}
 --- !u!43 &1734656735
 Mesh:
   m_ObjectHideFlags: 0
