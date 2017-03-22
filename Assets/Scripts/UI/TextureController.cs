@@ -10,40 +10,38 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SkinToneController : MonoBehaviour
+public class TextureController : MonoBehaviour
 {
     public DBHandler dbHandler;
     public GameObject ContentPanel;
     public GameObject ListItemPrefab;
 
-    protected List<SyncListFinding> colors;
+    protected List<SyncListFinding> textures;
 
-    void Start()
-    {
-
+    void Start() {
         populate();
-
     }
 
     public void populate()
     {
 
-        colors = dbHandler.getColors();
+        textures = dbHandler.getTextures();
 
         // 2. Iterate through the data, 
         //	  instantiate prefab, 
         //	  set the data, 
         //	  add it to panel
-        foreach (SyncListFinding color in colors)
+        foreach (SyncListFinding texture in textures)
         {
-            GameObject newColor = Instantiate(ListItemPrefab) as GameObject;
-            SlotItem controller = newColor.GetComponent<SlotItem>() as SlotItem;
-            controller.Preview.color = color.getColor();
-            controller.Name.text = color.name;
-            newColor.transform.SetParent(ContentPanel.transform, false);
-            newColor.transform.localScale = Vector3.one;
-            Debug.Log("Added color: Name: " + color.name + " Color: " + color.getColor().ToString());
+            GameObject newTexture = Instantiate(ListItemPrefab) as GameObject;
+            SlotItem controller = newTexture.GetComponent<SlotItem>() as SlotItem;
+            controller.Preview.sprite = Resources.Load<Sprite>(texture.texturePath);
+            controller.Name.text = texture.name;
+            newTexture.transform.SetParent(ContentPanel.transform, false);
+            newTexture.transform.localScale = Vector3.one;
+            Debug.Log("Added color: Name: " + texture.name + " Texture: " + texture.texturePath);
         }
+
     }
 
 }
