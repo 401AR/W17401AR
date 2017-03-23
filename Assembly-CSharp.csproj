@@ -58,10 +58,6 @@
      <Compile Include="Assets\Common\TapHandler.cs" />
      <Compile Include="Assets\Common\TrackableSettings.cs" />
      <Compile Include="Assets\DragHandler.cs" />
-     <Compile Include="Assets\MoverioUnityPlugin\MoverioController\Scripts\MoverioCameraController.cs" />
-     <Compile Include="Assets\MoverioUnityPlugin\MoverioController\Scripts\MoverioController.cs" />
-     <Compile Include="Assets\MoverioUnityPlugin\MoverioController\Scripts\MoverioTutorialController.cs" />
-     <Compile Include="Assets\MoverioUnityPlugin\MoverioController\Scripts\Utils\AccelRotator.cs" />
      <Compile Include="Assets\SamplesResources\CloudReco\Scripts\CloudRecoEventHandler.cs" />
      <Compile Include="Assets\SamplesResources\CloudReco\Scripts\CloudRecoTrackableEventHandler.cs" />
      <Compile Include="Assets\SamplesResources\CloudReco\Scripts\ContentManager.cs" />
@@ -104,12 +100,18 @@
      <Compile Include="Assets\Scripts\Core\QueryFinding.cs" />
      <Compile Include="Assets\Scripts\FrameRateControl.cs" />
      <Compile Include="Assets\Scripts\UI\ApplyButton.cs" />
+     <Compile Include="Assets\Scripts\UI\ClickPreview.cs" />
      <Compile Include="Assets\Scripts\UI\DisconnectButton.cs" />
+     <Compile Include="Assets\Scripts\UI\DropListController.cs" />
+     <Compile Include="Assets\Scripts\UI\FindingClickHandler.cs" />
      <Compile Include="Assets\Scripts\UI\HideStartServer.cs" />
      <Compile Include="Assets\Scripts\UI\JoinServerButton.cs" />
+     <Compile Include="Assets\Scripts\UI\ListItem.cs" />
+     <Compile Include="Assets\Scripts\UI\ResetCoreButton.cs" />
+     <Compile Include="Assets\Scripts\UI\ResetExtremitiesButton.cs" />
      <Compile Include="Assets\Scripts\UI\SkinToneController.cs" />
-     <Compile Include="Assets\Scripts\UI\SkinToneItem.cs" />
      <Compile Include="Assets\Scripts\UI\StartServerButton.cs" />
+     <Compile Include="Assets\Scripts\UI\TextureController.cs" />
      <Compile Include="Assets\Vuforia\Scripts\AR\Box1Overlay.cs" />
      <Compile Include="Assets\Vuforia\Scripts\AR\Box1TrackableEventHandler.cs" />
      <Compile Include="Assets\Vuforia\Scripts\AR\Box2Overlay.cs" />
@@ -148,7 +150,6 @@
      <Compile Include="Assets\Vuforia\Scripts\WireframeBehaviour.cs" />
      <Compile Include="Assets\Vuforia\Scripts\WireframeTrackableEventHandler.cs" />
      <Compile Include="Assets\Vuforia\Scripts\WordBehaviour.cs" />
-     <Compile Include="Assets\slot.cs" />
      <None Include="Assets\Vuforia\Shaders\ColoredLines.shader" />
      <None Include="Assets\StreamingAssets\QCAR\sodacan.xml" />
      <None Include="Assets\SamplesResources\CloudReco\Shaders\CR_Custom_TransparentUnlit.shader" />
@@ -169,7 +170,6 @@
      <None Include="Assets\StreamingAssets\QCAR\Tarmac.xml" />
      <None Include="Assets\license_3rdpartynotice.txt" />
      <None Include="Assets\readme_SDK.txt" />
-     <None Include="Assets\MoverioUnityPlugin\MoverioController\Manifest\AndroidManifest.xml" />
      <None Include="Assets\SamplesResources\ObjectReco\Shaders\ObjectReco_Custom_Outline.shader" />
      <None Include="Assets\Vuforia\Shaders\ClippingMask.shader" />
      <None Include="Assets\Vuforia\Shaders\BrightTexture.shader" />
@@ -178,6 +178,9 @@
      <None Include="Assets\config.txt" />
      <None Include="Assets\Editor\Vuforia\Vuforia\authoringinfo.xml" />
      <None Include="Assets\Vuforia\Shaders\Text3D.shader" />
+ <Reference Include="UnityEngine.Advertisements">
+ <HintPath>/Volumes/mein leiben/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>/Volumes/mein leiben/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
@@ -192,6 +195,9 @@
  </Reference>
  <Reference Include="UnityEngine.HoloLens">
  <HintPath>/Volumes/mein leiben/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Purchasing">
+ <HintPath>/Volumes/mein leiben/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityPurchasing/UnityEngine.Purchasing.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.VR">
  <HintPath>/Volumes/mein leiben/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
