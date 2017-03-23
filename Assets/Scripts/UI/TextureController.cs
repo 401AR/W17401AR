@@ -44,8 +44,7 @@ public class TextureController : MonoBehaviour
 
     public void clear() {
         // Erase previous childrens
-        for (int i = 0; i < this.scroller.content.childCount; i++)
-        {
+        for (int i = 0; i < this.scroller.content.childCount; i++) {
             Destroy(scroller.content.GetChild(i).gameObject);
         }
 

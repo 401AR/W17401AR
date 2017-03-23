@@ -18,7 +18,8 @@ using UnityEngine.Events;
 public enum Location
 {
     core = 0,
-    extremity = 1
+    extremity = 1,
+    invalid = 255
 };
 
 public class Baby : NetworkBehaviour {

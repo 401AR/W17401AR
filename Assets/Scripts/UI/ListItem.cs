@@ -18,9 +18,12 @@ public class ListItem : MonoBehaviour
     public Text Name;
     public Button Entry;
 
+    private SyncListFinding data;
+
     // Set list item data from SyncListFinding
     public void setData(SyncListFinding data) {
         Name.text = data.name;
+        this.data = data;
 
         // Processing differs based on texture / color loading.
         if (data.texturePath != "0") {
@@ -48,6 +51,7 @@ public class ListItem : MonoBehaviour
 
     // On click event handler
     public void TaskOnClick() {
+        FindingClickHandler.Instance.setCurrentFinding(this.data);
         Debug.Log("You clicked me!");
     }
 
