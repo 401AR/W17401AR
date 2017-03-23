@@ -47,6 +47,11 @@ namespace Vuforia
                     VuforiaRuntime.Instance.InitVuforia();
                 }
             }
+
+            if (!VuforiaConfiguration.Instance.Vuforia.DelayedInitialization)
+            {
+                VuforiaRuntime.Instance.InitVuforia();
+            }
         }
 
         /// <summary>

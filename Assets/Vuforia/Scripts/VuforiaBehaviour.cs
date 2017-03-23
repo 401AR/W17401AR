@@ -31,6 +31,11 @@ namespace Vuforia
 
                 base.Awake();
             }
+            AddOSSpecificExternalDatasetSearchDirs();
+
+            gameObject.AddComponent<ComponentFactoryStarterBehaviour>();
+
+            base.Awake();
         }
 
         private static VuforiaBehaviour mVuforiaBehaviour= null;
