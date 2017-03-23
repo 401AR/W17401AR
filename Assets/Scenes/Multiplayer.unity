@@ -670,7 +670,7 @@ Prefab:
     - target: {fileID: 224730481571854446, guid: f886854fbe9d3794eabb949479760980,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -16
       objectReference: {fileID: 0}
     - target: {fileID: 224730481571854446, guid: f886854fbe9d3794eabb949479760980,
         type: 2}
@@ -690,7 +690,7 @@ Prefab:
     - target: {fileID: 224730481571854446, guid: f886854fbe9d3794eabb949479760980,
         type: 2}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224730481571854446, guid: f886854fbe9d3794eabb949479760980,
         type: 2}
@@ -700,7 +700,7 @@ Prefab:
     - target: {fileID: 224730481571854446, guid: f886854fbe9d3794eabb949479760980,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224730481571854446, guid: f886854fbe9d3794eabb949479760980,
         type: 2}
@@ -1362,6 +1362,7 @@ MonoBehaviour:
   scroller: {fileID: 347216079}
   ListItemPrefab: {fileID: 114095566561790182, guid: f886854fbe9d3794eabb949479760980,
     type: 2}
+  items: []
 --- !u!114 &347216077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2503,7 +2504,7 @@ Prefab:
     - target: {fileID: 224730481571854446, guid: f886854fbe9d3794eabb949479760980,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -16
       objectReference: {fileID: 0}
     - target: {fileID: 224730481571854446, guid: f886854fbe9d3794eabb949479760980,
         type: 2}
@@ -2523,7 +2524,7 @@ Prefab:
     - target: {fileID: 224730481571854446, guid: f886854fbe9d3794eabb949479760980,
         type: 2}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224730481571854446, guid: f886854fbe9d3794eabb949479760980,
         type: 2}
@@ -2533,7 +2534,7 @@ Prefab:
     - target: {fileID: 224730481571854446, guid: f886854fbe9d3794eabb949479760980,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224730481571854446, guid: f886854fbe9d3794eabb949479760980,
         type: 2}
@@ -3463,6 +3464,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baby: {fileID: 1191372465}
+  core: {fileID: 1388616521}
+  extremities: {fileID: 347216076}
   Apply: {fileID: 952725327}
 --- !u!114 &952725327
 MonoBehaviour:
@@ -4702,6 +4705,7 @@ MonoBehaviour:
   scroller: {fileID: 1388616524}
   ListItemPrefab: {fileID: 114095566561790182, guid: f886854fbe9d3794eabb949479760980,
     type: 2}
+  items: []
 --- !u!114 &1388616522
 MonoBehaviour:
   m_ObjectHideFlags: 0

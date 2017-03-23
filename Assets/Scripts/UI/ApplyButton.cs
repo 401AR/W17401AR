@@ -13,6 +13,8 @@ using UnityEngine.UI;
 
 public class ApplyButton : MonoBehaviour {
     public Baby baby;
+    public DropListController core;
+    public DropListController extremities;
     public Button Apply;
 
     // Use this for initialization
@@ -23,13 +25,21 @@ public class ApplyButton : MonoBehaviour {
 	
     // On click event handler
     public void TaskOnClick() {
-        SyncListFinding test = new SyncListFinding();
-        test.position.Set(1.0f, 0.0f, 0.0f);
 
         Debug.Log(baby);
-        baby.addFinding(test, Location.core);
 
-        Debug.Log(JsonUtility.ToJson(test));
+        baby.clearAllFindings();
+
+        foreach (SyncListFinding item in core.items) {
+            baby.addFinding(item, Location.core);
+            Debug.Log(JsonUtility.ToJson(item));
+        }
+
+        foreach (SyncListFinding item in extremities.items) {
+            baby.addFinding(item, Location.extremity);
+            Debug.Log(JsonUtility.ToJson(item));
+        }
+        
         Debug.Log(baby.totalFindings());
     }
 

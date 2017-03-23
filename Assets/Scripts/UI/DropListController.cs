@@ -17,7 +17,7 @@ public class DropListController : MonoBehaviour
     public ScrollRect scroller;
     public ListItem ListItemPrefab;
 
-    protected List<SyncListFinding> items;
+    public List<SyncListFinding> items;
 
     void Start() {
         items = new List<SyncListFinding>();
@@ -30,6 +30,7 @@ public class DropListController : MonoBehaviour
         newColor.transform.localScale = Vector3.one;
         newColor.transform.localRotation = Quaternion.identity;
         newColor.setData(newFinding);
+        items.Add(newFinding);
     }
 
     public void clear() {
