@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 222164777926385796}
   - component: {fileID: 114216698317080468}
   - component: {fileID: 225625857544608028}
+  - component: {fileID: 114331519525165648}
   m_Layer: 5
   m_Name: sampleRedSwatch
   m_TagString: Untagged
@@ -56,6 +57,17 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114331519525165648
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1178046200942916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e54313792246d4676baa561f48d008fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!222 &222164777926385796
 CanvasRenderer:
   m_ObjectHideFlags: 1
