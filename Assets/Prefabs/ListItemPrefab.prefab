@@ -82,6 +82,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Preview: {fileID: 114892587001867402}
   Name: {fileID: 114160619687141274}
+  Entry: {fileID: 114767453217623528}
 --- !u!114 &114160619687141274
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -16,6 +16,7 @@ public class ListItem : MonoBehaviour
 {
     public Image Preview;
     public Text Name;
+    public Button Entry;
 
     // Set list item data from SyncListFinding
     public void setData(SyncListFinding data) {
@@ -37,6 +38,17 @@ public class ListItem : MonoBehaviour
             Debug.Log("Added finding: Name: " + data.name + " Color: " + data.colorJson);
         }
 
+    }
+
+    // Use this for initialization
+    void Start() {
+        Button btn = Entry.GetComponent<Button>();
+        btn.onClick.AddListener(TaskOnClick);
+    }
+
+    // On click event handler
+    public void TaskOnClick() {
+        Debug.Log("You clicked me!");
     }
 
 }

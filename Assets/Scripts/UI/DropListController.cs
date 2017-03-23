@@ -33,7 +33,12 @@ public class DropListController : MonoBehaviour
     }
 
     public void clear() {
+        // Erase previous childrens
+        for (int i = 0; i < this.scroller.content.childCount; i++) {
+            Destroy(scroller.content.GetChild(i).gameObject);
+        }
 
+        items.Clear();
     }
 
     public int totalElements() {
