@@ -5,6 +5,7 @@
  * 
  * Description: Provides handling of dynamic content for (skin tone) scroll lists.
  * Credits: http://www.folio3.com/blog/creating-dynamic-scrollable-lists-with-new-unity-canvas-ui/
+ * http://www.zesix.com/?p=3651
  * ***************************************************************************/
 using System.Collections;
 using System.Collections.Generic;

@@ -3,11 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class FindingClickHandler : MonoBehaviour {
-
     public SyncListFinding currentFinding;
     public DropListController coreDropList;
     public DropListController extremityDropList;
-
 
     private static FindingClickHandler _instance = null;
     public static FindingClickHandler Instance { get { return _instance; } }
@@ -30,23 +28,28 @@ public class FindingClickHandler : MonoBehaviour {
         currentFinding = finding;
     }
 
-    public void setPosition(Vector3 position) {
+    public void setPosition(string name, Vector3 position) {
         // A finding must be selected before setting position.
         if (currentFinding == null) { return; }
 
-        currentFinding.position = position;     // FIXME: This really needs to assign an appropriate position on the baby model.
-        Location destination = sortFinding();
+        currentFinding.position = position;                 // FIXME: This really needs to assign an appropriate position on the baby model.
+
+        Location destination = Location.invalid;
+        switch (name)
+        {
+            case "coreFront":
+                destination = Location.core;
+                break;
+            case "coreBack":
+                destination = Location.core;
+                break;
+            // If not core, then must be extremity (this is only called by onclick event, so can't be invalid position).
+            default:
+                destination = Location.extremity;
+                break;
+        }
 
         addToList(destination);
-    }
-
-    public Location sortFinding() {
-        Location sortedLocation = Location.core; //Location.invalid;
-
-        // IF POSITION BETWEEN ___ AND ____ THEN IS CORE
-        // IF POSITION BETWEEN ___ AND ____ THEN IS EXTREMITY
-        
-        return sortedLocation;
     }
 
     public void addToList(Location destination) {

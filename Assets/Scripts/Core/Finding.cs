@@ -32,4 +32,5 @@ public class SyncListFinding {
         return JsonUtility.FromJson<Color>(colorJson);
     }
 
+    // TODO: Size will be used to track the size of a texture finding applied to a baby (ie. small rash, big rash).  So be in radius?
 }

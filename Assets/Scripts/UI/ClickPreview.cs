@@ -7,17 +7,16 @@ public class ClickPreview : MonoBehaviour {
     public Button babyPreview;
 
     // Use this for initialization
-    void Start()
-    {
+    void Start() {
         Button btn = babyPreview.GetComponent<Button>();
         btn.onClick.AddListener(TaskOnClick);
+        name = btn.name;
     }
 
     // On click event handler
-    public void TaskOnClick()
-    {
+    public void TaskOnClick() {
         Vector2 mousePos = Input.mousePosition;
         Vector3 worldPos = new Vector3(mousePos.x, mousePos.y, 0.0f);
-        FindingClickHandler.Instance.setPosition(worldPos);
+        FindingClickHandler.Instance.setPosition(name, worldPos);
     }
 }

@@ -5,6 +5,7 @@
  * 
  * Description: Provides handling of dynamic content for DropListController.
  * Credits: http://www.folio3.com/blog/creating-dynamic-scrollable-lists-with-new-unity-canvas-ui/
+ * Credits: http://www.zesix.com/?p=3651
  * ***************************************************************************/
 using System.Collections;
 using System.Collections.Generic;
