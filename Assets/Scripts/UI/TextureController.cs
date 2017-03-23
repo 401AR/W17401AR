@@ -9,39 +9,41 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TextureController : MonoBehaviour
 {
     public DBHandler dbHandler;
-    public GameObject ContentPanel;
-    public GameObject ListItemPrefab;
+    public ScrollRect scroller;
+    public ListItem ListItemPrefab;
 
-    protected List<SyncListFinding> textures;
+    protected List<SyncListFinding> items;
 
     void Start() {
+        items = new List<SyncListFinding>();
         populate();
     }
 
-    public void populate()
-    {
+    public void populate() {
+        items = dbHandler.getTextures();
 
-        textures = dbHandler.getTextures();
-
-        // 2. Iterate through the data, 
-        //	  instantiate prefab, 
-        //	  set the data, 
-        //	  add it to panel
-        foreach (SyncListFinding texture in textures)
-        {
-            GameObject newTexture = Instantiate(ListItemPrefab) as GameObject;
-            SlotItem controller = newTexture.GetComponent<SlotItem>() as SlotItem;
-            controller.Preview.sprite = Resources.Load<Sprite>(texture.texturePath);
-            controller.Name.text = texture.name;
-            newTexture.transform.SetParent(ContentPanel.transform, false);
-            newTexture.transform.localScale = Vector3.one;
-            Debug.Log("Added color: Name: " + texture.name + " Texture: " + texture.texturePath);
+        // Erase previous childrens
+        for (int i = 0; i < this.scroller.content.childCount; i++) {
+            Destroy(scroller.content.GetChild(i).gameObject);
         }
 
+        foreach (SyncListFinding texture in items) {
+            var newTexture = Instantiate(ListItemPrefab) as ListItem;
+            newTexture.transform.SetParent(this.scroller.content);
+            newTexture.transform.localPosition = Vector3.zero;
+            newTexture.transform.localScale = Vector3.one;
+            newTexture.transform.localRotation = Quaternion.identity;
+            newTexture.setData(texture);
+        }
+    }
+
+    public int totalElements() {
+        return items.Count;
     }
 
 }
