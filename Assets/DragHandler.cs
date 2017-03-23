@@ -18,6 +18,7 @@ public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 		// (colorItem) that michael created
 		// which is being dragged
 		startPosition = transform.position;
+		//used to determine if object has been dropped into a new slot
 		startParent = transform.parent;
 		//this canvas group holds all the drag location slots
 		GetComponent<CanvasGroup>().blocksRaycasts = false;
@@ -26,7 +27,7 @@ public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 	#endregion
 
 	#region IDragHandler implementation
-
+	// called every frame of a drag
 	public void OnDrag (PointerEventData eventData)
 	{
 		transform.position = Input.mousePosition;
@@ -40,7 +41,7 @@ public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 	{
 		itemBeingDragged = null;
 		GetComponent<CanvasGroup>().blocksRaycasts = true;
-		if (transform.parent = startParent) {
+		if (transform.parent == startParent) {
 			transform.position = startPosition;
 		}
 	}

@@ -12,7 +12,7 @@ public class slot : MonoBehaviour, IDropHandler {
 	public GameObject item {
 		get {
 			// if there is an item
-			if (transform.childCount > 0) {
+			if (transform.childCount>0) {
 				// return the item to the slot
 				return transform.GetChild (0).gameObject;
 			}
@@ -20,11 +20,11 @@ public class slot : MonoBehaviour, IDropHandler {
 		}
 	}
 
-	//for the recieveing object
+	//for the recieving object
 	#region IDropHandler implementation
 	public void OnDrop (PointerEventData eventData)
 	{
-		if (!item) {
+		if(!item) {
 			//if we already have an skin tone item, we dont want to accept an item
 			//this executes when item dragged to slot
 			DragHandler.itemBeingDragged.transform.SetParent (transform);
