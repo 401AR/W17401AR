@@ -1,0 +1,266 @@
+Initialize engine version: 5.5.0f3 (38b4efef76f0)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 1060 (ID=0x1c20)
+    Vendor:   NVIDIA
+    VRAM:     3072 MB
+    Driver:   21.21.13.6959
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\401AR\Desktop\AR\W17401AR\Proto_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\401AR\Desktop\AR\W17401AR\Proto_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\401AR\Desktop\AR\W17401AR\Proto_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\401AR\Desktop\AR\W17401AR\Proto_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\401AR\Desktop\AR\W17401AR\Proto_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\401AR\Desktop\AR\W17401AR\Proto_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\401AR\Desktop\AR\W17401AR\Proto_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\401AR\Desktop\AR\W17401AR\Proto_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\401AR\Desktop\AR\W17401AR\Proto_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\401AR\Desktop\AR\W17401AR\Proto_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\401AR\Desktop\AR\W17401AR\Proto_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading C:\Users\401AR\Desktop\AR\W17401AR\Proto_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+Platform assembly: C:\Users\401AR\Desktop\AR\W17401AR\Proto_Data\Managed\SimpleSQL_Runtime.dll (this message is harmless)
+Loading C:\Users\401AR\Desktop\AR\W17401AR\Proto_Data\Managed\SimpleSQL_Runtime.dll into Unity Child Domain
+Platform assembly: C:\Users\401AR\Desktop\AR\W17401AR\Proto_Data\Managed\SimpleSQL_SystemData.dll (this message is harmless)
+Loading C:\Users\401AR\Desktop\AR\W17401AR\Proto_Data\Managed\SimpleSQL_SystemData.dll into Unity Child Domain
+Platform assembly: C:\Users\401AR\Desktop\AR\W17401AR\Proto_Data\Managed\System.Data.dll (this message is harmless)
+Loading C:\Users\401AR\Desktop\AR\W17401AR\Proto_Data\Managed\System.Data.dll into Unity Child Domain
+Platform assembly: C:\Users\401AR\Desktop\AR\W17401AR\Proto_Data\Managed\Vuforia.UnityExtensions.dll (this message is harmless)
+Loading C:\Users\401AR\Desktop\AR\W17401AR\Proto_Data\Managed\Vuforia.UnityExtensions.dll into Unity Child Domain
+- Completed reload, in  0.030 seconds
+Platform assembly: C:\Users\401AR\Desktop\AR\W17401AR\Proto_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\401AR\Desktop\AR\W17401AR\Proto_Data\Managed\System.dll (this message is harmless)
+OnLevelWasLoaded was found on VuforiaAbstractBehaviour
+This message has been deprecated and will be removed in a later version of Unity.
+Add a delegate to SceneManager.sceneLoaded instead to get notifications after scene loading has completed
+ 
+(Filename:  Line: 382)
+
+OnLevelWasLoaded was found on VuforiaBehaviour
+This message has been deprecated and will be removed in a later version of Unity.
+Add a delegate to SceneManager.sceneLoaded instead to get notifications after scene loading has completed
+ 
+(Filename:  Line: 382)
+
+Platform assembly: C:\Users\401AR\Desktop\AR\W17401AR\Proto_Data\Managed\System.Xml.dll (this message is harmless)
+desktop: 2560x1440 60Hz; virtual: 2560x1440 at 0,0
+<RI> Initializing input.
+XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 1.321573 ms
+Operator
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Vuforia initialization successful
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: b38 -> priority: 1 
+  Thread -> id: 3750 -> priority: 1 
+Starting client...
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Received value: 'localhost' from Server, IP
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Received value: '7777' from Server, Port
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Received value: 'localhost' from Server, IP
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Attempting to connect to localhost : 7777
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Attempting to connect to localhost : 7777
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Ping: Error performing ICMP transmission. Possibly because of a timeout
+Network configuration mismatch detected. The number of networked scripts on the client does not match the number of networked scripts on the server. This could be caused by lazy loading of scripts on the client. This warning can be disabled by the checkbox in NetworkManager Script CRC Check.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+CRC Remote Dump Baby : 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+The referenced script on this Behaviour (Game Object 'coreSlot') is missing!
+ 
+(Filename:  Line: 1754)
+
+The referenced script on this Behaviour (Game Object 'extremitiesSlot') is missing!
+ 
+(Filename:  Line: 1754)
+
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 5.961302 ms
+Fallback handler could not load library C:/Users/401AR/Desktop/AR/W17401AR/Proto_Data/Mono/sqlite3
+Fallback handler could not load library C:/Users/401AR/Desktop/AR/W17401AR/Proto_Data/Mono/.\sqlite3
+Fallback handler could not load library C:/Users/401AR/Desktop/AR/W17401AR/Proto_Data/Mono/sqlite3
+Fallback handler could not load library C:/Users/401AR/Desktop/AR/W17401AR/Proto_Data/Mono/libsqlite3
+Fallback handler could not load library C:/Users/401AR/Desktop/AR/W17401AR/Proto_Data/Mono/.\libsqlite3
+Fallback handler could not load library C:/Users/401AR/Desktop/AR/W17401AR/Proto_Data/Mono/libsqlite3
+Fallback handler could not load library C:/Users/401AR/Desktop/AR/W17401AR/Proto_Data/Mono/sqlite3
+Fallback handler could not load library C:/Users/401AR/Desktop/AR/W17401AR/Proto_Data/Mono/.\sqlite3
+Fallback handler could not load library C:/Users/401AR/Desktop/AR/W17401AR/Proto_Data/Mono/sqlite3
+Fallback handler could not load library C:/Users/401AR/Desktop/AR/W17401AR/Proto_Data/Mono/libsqlite3
+Fallback handler could not load library C:/Users/401AR/Desktop/AR/W17401AR/Proto_Data/Mono/.\libsqlite3
+Fallback handler could not load library C:/Users/401AR/Desktop/AR/W17401AR/Proto_Data/Mono/libsqlite3
+DllNotFoundException: sqlite3
+  at (wrapper managed-to-native) SimpleSQL.SQLite3:Open (string,intptr&)
+  at SimpleSQL.SQLiteConnection..ctor (System.String databasePath) [0x00000] in <filename unknown>:0 
+  at SimpleSQL.SimpleSQLManager.CreateConnection (System.String documentsPath) [0x00000] in <filename unknown>:0 
+  at SimpleSQL.SimpleSQLManager.Initialize (Boolean forceReinitialization) [0x00000] in <filename unknown>:0 
+  at SimpleSQL.SimpleSQLManager.Awake () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Operator
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Setting BehaviourComponentFactory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Trackable Qr_code lost
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Could not initialize the tracker.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+SetHint
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+SetHint
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+SetHint
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Dataset Baby could not be loaded and cannot be activated.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+StartVuforia
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Creating a Mono Camera Configuration (Check for reflection)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Trackable Qr_head lost
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Baby.totalFindings (Location location) [0x00000] in <filename unknown>:0 
+  at Baby.totalFindings () [0x00000] in <filename unknown>:0 
+  at BabyChange.ChangeColor () [0x00000] in <filename unknown>:0 
+  at BabyChange.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Baby.totalFindings (Location location) [0x00000] in <filename unknown>:0 
+  at Baby.totalFindings () [0x00000] in <filename unknown>:0 
+  at BabyChange.ChangeColor () [0x00000] in <filename unknown>:0 
+  at BabyChange.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 824.
+Total: 0.702359 ms (FindLiveObjects: 0.040113 ms CreateObjectMapping: 0.030267 ms MarkObjects: 0.567430 ms  DeleteObjects: 0.064182 ms)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Baby.totalFindings (Location location) [0x00000] in <filename unknown>:0 
+  at Baby.totalFindings () [0x00000] in <filename unknown>:0 
+  at BabyChange.ChangeColor () [0x00000] in <filename unknown>:0 
+  at BabyChange.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Baby.totalFindings (Location location) [0x00000] in <filename unknown>:0 
+  at Baby.totalFindings () [0x00000] in <filename unknown>:0 
+  at BabyChange.ChangeColor () [0x00000] in <filename unknown>:0 
+  at BabyChange.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Baby.totalFindings (Location location) [0x00000] in <filename unknown>:0 
+  at Baby.totalFindings () [0x00000] in <filename unknown>:0 
+  at BabyChange.ChangeColor () [0x00000] in <filename unknown>:0 
+  at BabyChange.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Baby.totalFindings (Location location) [0x00000] in <filename unknown>:0 
+  at Baby.totalFindings () [0x00000] in <filename unknown>:0 
+  at BabyChange.ChangeColor () [0x00000] in <filename unknown>:0 
+  at BabyChange.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Baby.totalFindings (Location location) [0x00000] in <filename unknown>:0 
+  at Baby.totalFindings () [0x00000] in <filename unknown>:0 
+  at BabyChange.ChangeColor () [0x00000] in <filename unknown>:0 
+  at BabyChange.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Baby.totalFindings (Location location) [0x00000] in <filename unknown>:0 
+  at Baby.totalFindings () [0x00000] in <filename unknown>:0 
+  at BabyChange.ChangeColor () [0x00000] in <filename unknown>:0 
+  at BabyChange.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Baby.totalFindings (Location location) [0x00000] in <filename unknown>:0 
+  at Baby.totalFindings () [0x00000] in <filename unknown>:0 
+  at BabyChange.ChangeColor () [0x00000] in <filename unknown>:0 
+  at BabyChange.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Baby.totalFindings (Location location) [0x00000] in <filename unknown>:0 
+  at Baby.totalFindings () [0x00000] in <filename unknown>:0 
+  at BabyChange.ChangeColor () [0x00000] in <filename unknown>:0 
+  at BabyChange.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+StopVuforia
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Trackable Qr_head lost
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Trackable Qr_code lost
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
