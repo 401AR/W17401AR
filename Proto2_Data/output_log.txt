@@ -27,7 +27,7 @@ Platform assembly: C:\Users\401AR\Desktop\AR\W17401AR\Proto2_Data\Managed\System
 Loading C:\Users\401AR\Desktop\AR\W17401AR\Proto2_Data\Managed\System.Data.dll into Unity Child Domain
 Platform assembly: C:\Users\401AR\Desktop\AR\W17401AR\Proto2_Data\Managed\Vuforia.UnityExtensions.dll (this message is harmless)
 Loading C:\Users\401AR\Desktop\AR\W17401AR\Proto2_Data\Managed\Vuforia.UnityExtensions.dll into Unity Child Domain
-- Completed reload, in  0.142 seconds
+- Completed reload, in  0.049 seconds
 Platform assembly: C:\Users\401AR\Desktop\AR\W17401AR\Proto2_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\401AR\Desktop\AR\W17401AR\Proto2_Data\Managed\System.dll (this message is harmless)
 OnLevelWasLoaded was found on VuforiaAbstractBehaviour
@@ -48,14 +48,14 @@ desktop: 2560x1440 60Hz; virtual: 2560x1440 at 0,0
 XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 1.261767 ms
+UnloadTime: 3.618645 ms
 Operator
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 3bd8 -> priority: 1 
-  Thread -> id: 47d4 -> priority: 1 
+  Thread -> id: 4610 -> priority: 1 
+  Thread -> id: 4550 -> priority: 1 
 Starting server...
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
@@ -85,7 +85,7 @@ The referenced script on this Behaviour (Game Object 'extremitiesSlot') is missi
 (Filename:  Line: 1754)
 
 Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 6.731490 ms
+UnloadTime: 5.309997 ms
 Fallback handler could not load library C:/Users/401AR/Desktop/AR/W17401AR/Proto2_Data/Mono/sqlite3
 Fallback handler could not load library C:/Users/401AR/Desktop/AR/W17401AR/Proto2_Data/Mono/.\sqlite3
 Fallback handler could not load library C:/Users/401AR/Desktop/AR/W17401AR/Proto2_Data/Mono/sqlite3
@@ -151,57 +151,19 @@ DllNotFoundException: sqlite3
 
 
 Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 829.
-Total: 0.900376 ms (FindLiveObjects: 0.067464 ms CreateObjectMapping: 0.062723 ms MarkObjects: 0.707100 ms  DeleteObjects: 0.062359 ms)
+Total: 0.568889 ms (FindLiveObjects: 0.033185 ms CreateObjectMapping: 0.022609 ms MarkObjects: 0.465322 ms  DeleteObjects: 0.047042 ms)
 
-You clicked me!
+Ping: Error performing ICMP transmission. Possibly because of a timeout
+New client connected
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-BabyObj (Baby)
+Log: connection {1} has been disconnected by timeout; address {::ffff:172.28.102.232:63194}
+Connection to server terminated
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-UPDATE BABY AR HERE
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Core Findings: 
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Extremity Findings: 
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Core Findings cleared
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Findings cleared from baby.
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-UPDATE BABY AR HERE
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Core Findings: 
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Extremity Findings: 
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Extremity Findings cleared
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Findings cleared from baby.
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-0
+ServerDisconnected due to error: Timeout
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 

@@ -1,4 +1,4 @@
 ; This is an ini comment
 [Server]
-IP=192.168.0.32
+IP=172.28.102.232
 Port=7777
