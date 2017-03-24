@@ -14,15 +14,84 @@ public class BabyChange : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        ChangeColor();
+        //ChangeColor();
 	}
 
-    public void ChangeColor()
+    public void ChangeColor(string newColor)
     {
-        if (baby.totalFindings() != currentColour)
-        {
-            GetComponent<Renderer>().material.color = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
-            currentColour = baby.totalFindings();
+        //Debug.Log(newColor + " made it");
+
+        bool colorSection = false;
+        float convertedNumberR = -1;
+        float convertedNumberG = -1;
+        float convertedNumberB = -1;
+        float convertedNumberA = -1;
+        for (int i = 0; i < newColor.Length; ++i ) {
+            //Debug.Log(newColor[i]);
+            if (newColor[i] == 'n' && i > 9)
+            {
+                if (newColor[i-8] == 'c' && newColor[i - 7] == 'o' && newColor[i - 6] == 'l' && newColor[i - 5] == 'o' &&
+                    newColor[i - 4] == 'r' && newColor[i - 3] == 'J' && newColor[i - 2] == 's' && newColor[i - 1] == 'o')
+                {
+                    //Debug.Log("colorJson");
+                    colorSection = true;
+                }
+            }
+            if (newColor[i] == 'r' && colorSection)
+            {
+                convertedNumberR = TryConversionIntToString(i, newColor);
+            }
+            else if (newColor[i] == 'g' && colorSection)
+            {
+                convertedNumberG = TryConversionIntToString(i, newColor);
+            }
+            else if (newColor[i] == 'b' && colorSection)
+            {
+                convertedNumberB = TryConversionIntToString(i, newColor);
+            }
+            else if (newColor[i] == 'a' && colorSection)
+            {
+                convertedNumberA = TryConversionIntToString(i, newColor);
+                colorSection = false;
+                Debug.Log(convertedNumberR + " " + convertedNumberG + " " + convertedNumberB + " " + convertedNumberA);
+            }
         }
+
+        if (convertedNumberR != -1 && convertedNumberG != -1 && convertedNumberB != -1 && convertedNumberA != -1)
+        {
+            Debug.Log("Baby Changed color");
+            GetComponent<Renderer>().material.color = new Color(convertedNumberR, convertedNumberG, convertedNumberB, convertedNumberA);
+        }
+    }
+
+    private float TryConversionIntToString(int i, string newColor)
+    {
+
+        float convertedNumber = 0;
+        string stringToConvert = newColor[i + 4].ToString() + newColor[i + 5].ToString() +
+            newColor[i + 6].ToString() + newColor[i + 7].ToString();
+
+        try
+        {
+            convertedNumber = float.Parse(stringToConvert);
+            //Debug.Log("converted " + stringToConvert + " " + convertedNumberR);
+        }
+        catch
+        {
+            stringToConvert = newColor[i + 4].ToString() + newColor[i + 5].ToString() +
+            newColor[i + 6].ToString();
+
+            try
+            {
+                convertedNumber = float.Parse(stringToConvert);
+                //Debug.Log("converted 2 " + stringToConvert + " " + convertedNumberR);
+            }
+            catch
+            {
+                Debug.Log("Wrong conversion");
+            }
+        }
+
+        return convertedNumber;
     }
 }

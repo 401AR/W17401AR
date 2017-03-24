@@ -30,6 +30,9 @@ public class Baby : NetworkBehaviour {
     [SerializeField]
     public SyncListString extremityFindings;        // FIXME: This is public for testing only, it must be private after basic tests are completed.
 
+    public GameObject babyBody;
+    public GameObject babyHead;
+
     // Override client instantiation to add hooks for finding updates.
     public override void OnStartClient() {
         coreFindings.Callback = onChangeFindings;
@@ -49,6 +52,12 @@ public class Baby : NetworkBehaviour {
         }*/
 
         Debug.Log("UPDATE BABY AR HERE");
+
+        if (coreFindings.Count > 0)
+        {
+            babyBody.GetComponent<BabyChange>().ChangeColor(coreFindings[0]);
+            babyHead.GetComponent<BabyChange>().ChangeColor(coreFindings[0]);
+        }
 
         printFindings();
     }

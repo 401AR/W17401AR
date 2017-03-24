@@ -25,6 +25,9 @@ public class DropListController : MonoBehaviour
     }
 
     public void add(SyncListFinding newFinding) {
+        //keep this if want only one option on baby at a time
+        clear();
+
         ListItem newColor = Instantiate(ListItemPrefab) as ListItem;
         newColor.transform.SetParent(scroller.content);
         newColor.transform.localPosition = Vector3.zero;
