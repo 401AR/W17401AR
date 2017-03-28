@@ -27,7 +27,7 @@ Platform assembly: C:\Users\Mike\Documents\Games\W17401AR-master\W17401AR\Proto2
 Loading C:\Users\Mike\Documents\Games\W17401AR-master\W17401AR\Proto2_Data\Managed\System.Data.dll into Unity Child Domain
 Platform assembly: C:\Users\Mike\Documents\Games\W17401AR-master\W17401AR\Proto2_Data\Managed\Vuforia.UnityExtensions.dll (this message is harmless)
 Loading C:\Users\Mike\Documents\Games\W17401AR-master\W17401AR\Proto2_Data\Managed\Vuforia.UnityExtensions.dll into Unity Child Domain
-- Completed reload, in  0.056 seconds
+- Completed reload, in  0.059 seconds
 Platform assembly: C:\Users\Mike\Documents\Games\W17401AR-master\W17401AR\Proto2_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\Mike\Documents\Games\W17401AR-master\W17401AR\Proto2_Data\Managed\System.dll (this message is harmless)
 OnLevelWasLoaded was found on VuforiaAbstractBehaviour
@@ -47,14 +47,14 @@ desktop: 1920x1080 59Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 1.001332 ms
+UnloadTime: 277.912262 ms
 Operator
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 3d40 -> priority: 1 
-  Thread -> id: 2d44 -> priority: 1 
+  Thread -> id: 5a74 -> priority: 1 
+  Thread -> id: 5414 -> priority: 1 
 Starting server...
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
@@ -75,8 +75,9 @@ Server running on port: 7777
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
+Ping: Error performing ICMP transmission. Possibly because of a timeout
 Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 7.960239 ms
+UnloadTime: 13.757617 ms
 Operator
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
@@ -159,9 +160,64 @@ Added finding: Name: Brass Teapot Rash Texture: Textures/TextureTeapotBrass
 
 
 Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 961.
-Total: 1.014719 ms (FindLiveObjects: 0.072288 ms CreateObjectMapping: 0.039714 ms MarkObjects: 0.847830 ms  DeleteObjects: 0.053993 ms)
+Total: 139.826492 ms (FindLiveObjects: 0.052208 ms CreateObjectMapping: 68.538643 ms MarkObjects: 71.168259 ms  DeleteObjects: 0.066934 ms)
 
-Ping: Error performing ICMP transmission. Possibly because of a timeout
+Added finding: Name:  Texture: 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+You clicked me!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+You clicked me!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+You clicked me!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Added finding: Name: Pale Skin Color: {"r":0.99, "g":0.87, "b":0.80, "a":1.0}
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+You clicked me!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+You clicked me!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Added finding: Name: Low Oxygen Color: {"r":0.90, "g":0.93, "b":1.0, "a":1.0}
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+You clicked me!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Added finding: Name: Blue Teapot Rash Texture: Textures/TextureTeapotBlue
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+You clicked me!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+You clicked me!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Added finding: Name: Hispanic Skin Color: {"r":0.83 ,"g":0.70, "b":0.52, "a":1.0}
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+You clicked me!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
 Tried to unregister camera which hasn't been registered before
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
