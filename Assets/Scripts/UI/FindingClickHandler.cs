@@ -1,4 +1,11 @@
-﻿using System.Collections;
+﻿/******************************************************************************
+ * Author: Michael Morris
+ * Course: CMPUT401 AR
+ * File: FindingClickHandler.cs
+ * 
+ * Description: Provides handling of clicks on parts of the baby images.
+ * ***************************************************************************/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

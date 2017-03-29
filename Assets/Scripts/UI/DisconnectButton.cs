@@ -1,4 +1,12 @@
-﻿using System.Collections;
+﻿/******************************************************************************
+ * Author: Michael Morris
+ * Course: CMPUT401 AR
+ * File: DisconnectButton.cs
+ * 
+ * Description: Provides handling of the "OFF" button in Multiplayer.scene.  Visible
+ * only to Trainer.
+ * ***************************************************************************/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;

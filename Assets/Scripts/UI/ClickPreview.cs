@@ -1,4 +1,12 @@
-﻿using System.Collections;
+﻿/******************************************************************************
+ * Author: Michael Morris
+ * Course: CMPUT401 AR
+ * File: ClickPreview.cs
+ * 
+ * Description: Provides position handling based on where on a baby body part
+ * is clicked.
+ * ***************************************************************************/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;

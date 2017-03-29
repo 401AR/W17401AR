@@ -1,4 +1,11 @@
-﻿using System.Collections;
+﻿/******************************************************************************
+ * Author: Michael Morris
+ * Course: CMPUT401 AR
+ * File: DBHandler.cs
+ * 
+ * Description: Provides handling of database queries and parsing into AHS-AR class lists.
+ * ***************************************************************************/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using SimpleSQL;

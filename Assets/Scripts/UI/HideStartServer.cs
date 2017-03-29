@@ -1,4 +1,11 @@
-﻿using System.Collections;
+﻿/******************************************************************************
+ * Author: Michael Morris
+ * Course: CMPUT401 AR
+ * File: HideStartServer.cs
+ * 
+ * Description: Hides "Start Server" button if the detected device is mobile.
+ * ***************************************************************************/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
