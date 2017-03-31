@@ -16,7 +16,7 @@ public class ListItem : MonoBehaviour
 {
     public Image Preview;
     public Text Name;
-    public Button Entry;
+    public Toggle Entry;
 
     private SyncListFinding data;
 
@@ -43,16 +43,40 @@ public class ListItem : MonoBehaviour
 
     }
 
+    // Highlight this button
+    public void select() {
+        Entry.isOn = true;
+    }
+
+    // Remove highlight on this button.
+    public void deselect() {
+        Entry.isOn = false;
+    }
+
     // Use this for initialization
     void Start() {
-        Button btn = Entry.GetComponent<Button>();
-        btn.onClick.AddListener(TaskOnClick);
+        Toggle btn = Entry.GetComponent<Toggle>();
+        btn.onValueChanged.AddListener((value) => {
+            TaskOnValueChanged(value);
+        }
+        );
     }
 
     // On click event handler
-    public void TaskOnClick() {
-        FindingClickHandler.Instance.setCurrentFinding(this.data);
-        Debug.Log("You clicked me!");
+    public void TaskOnValueChanged(bool newState) {
+        if (newState == true) {
+            FindingClickHandler.Instance.setCurrentFinding(this.data);
+            Entry.isOn = !Entry.isOn;
+
+            //parentList.highlight(data.id);
+            Debug.Log("You clicked me!");
+        }
     }
+
+    // Clear selection before destroying.
+    private void OnDestroy() {
+        deselect();
+    }
+
 
 }

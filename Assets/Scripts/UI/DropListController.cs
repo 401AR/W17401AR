@@ -19,21 +19,27 @@ public class DropListController : MonoBehaviour
     public ListItem ListItemPrefab;
 
     public List<SyncListFinding> items;
+    public List<ListItem> itemPrefabs;
 
     void Start() {
         items = new List<SyncListFinding>();
     }
 
     public void add(SyncListFinding newFinding) {
-        //keep this if want only one option on baby at a time
-        clear();
+        
+        // Restrict color findings to one active color at a time.
+        if (newFinding.colorJson != "0") {
+            clear();
+        }
 
-        ListItem newColor = Instantiate(ListItemPrefab) as ListItem;
-        newColor.transform.SetParent(scroller.content);
-        newColor.transform.localPosition = Vector3.zero;
-        newColor.transform.localScale = Vector3.one;
-        newColor.transform.localRotation = Quaternion.identity;
-        newColor.setData(newFinding);
+        ListItem newPrefab = Instantiate(ListItemPrefab) as ListItem;
+        newPrefab.transform.SetParent(scroller.content);
+        newPrefab.transform.localPosition = Vector3.zero;
+        newPrefab.transform.localScale = Vector3.one;
+        newPrefab.transform.localRotation = Quaternion.identity;
+        newPrefab.setData(newFinding);
+        
+        itemPrefabs.Add(newPrefab);
         items.Add(newFinding);
     }
 
@@ -43,7 +49,22 @@ public class DropListController : MonoBehaviour
             Destroy(scroller.content.GetChild(i).gameObject);
         }
 
+        itemPrefabs.Clear();
         items.Clear();
+    }
+
+    public void highlight(int highLightId) {
+        
+        // Only one finding can be added at a time.  Therefore, any previous findings must be de-selected.
+        for (int i = 0; i < itemPrefabs.Count; i++) {
+            if ( i == (highLightId - 1) ) {
+                itemPrefabs[i].select();
+            }
+            else {
+                itemPrefabs[i].deselect();
+            }
+
+        }
     }
 
     public int totalElements() {
