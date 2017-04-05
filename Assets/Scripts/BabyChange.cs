@@ -14,8 +14,14 @@ public class BabyChange : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        //ChangeColor();
+
 	}
+
+    public void CorrectOffset()
+    {
+        Vector3 temp = Vuforia.DeviceTrackerARController.DEFAULT_HEAD_PIVOT;
+        //Vuforia.MixedRealityController.Mode.ROTATIONAL_VIEWER_AR;
+    }
 
     public void ChangeColor(string newColor)
     {
