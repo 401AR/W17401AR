@@ -1,4 +1,12 @@
-﻿using System.Collections;
+﻿/******************************************************************************
+ * Author: Christopher Hegberg
+ * Course: CMPUT401 AR
+ * File: BabyChange.cs
+ * 
+ * Description: Get changes made by server and updates baby model as a result.
+ * 
+ * ***************************************************************************/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
