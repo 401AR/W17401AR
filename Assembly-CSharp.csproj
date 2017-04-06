@@ -160,7 +160,6 @@
      <None Include="Assets\StreamingAssets\QCAR\Boxes_OT.xml" />
      <None Include="Assets\Vuforia\Shaders\RenderVideoBackground.shader" />
      <None Include="Assets\StreamingAssets\QCAR\StonesAndWood.xml" />
-     <None Include="Assets\ARScene\Boxes\Boxes_OT.xml" />
      <None Include="Assets\Vuforia\Shaders\VideoBackground.shader" />
      <None Include="Assets\Editor\QCAR\TargetsetData\Boxes_info.xml" />
      <None Include="Assets\SimpleSQL\readme.txt" />
