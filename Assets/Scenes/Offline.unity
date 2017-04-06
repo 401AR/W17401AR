@@ -873,7 +873,7 @@ GameObject:
   - component: {fileID: 862830223}
   - component: {fileID: 862830222}
   m_Layer: 5
-  m_Name: Text (3)
+  m_Name: Version Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2678,7 +2678,7 @@ GameObject:
   - component: {fileID: 1969012099}
   m_Layer: 5
   m_Name: ErrText
-  m_TagString: Untagged
+  m_TagString: Error Message
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

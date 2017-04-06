@@ -42,6 +42,7 @@ public class ConnectionTester : MonoBehaviour {
             _instance = this;
         }
 
+
         DontDestroyOnLoad(this.gameObject);
     }
 
@@ -58,16 +59,28 @@ public class ConnectionTester : MonoBehaviour {
         float startTime = Time.time;
 
         // Ping can be time consuming.
+
+        if (testResults == null) {
+            // References are lost when reloading scenes.  They must be reconnected to avoid breaking scripts.
+            testResults = GameObject.FindWithTag("Error Message").GetComponent<Text>();
+        }
+
         testResults.text = "Checking network...";
         while (!ping.isDone && Time.time < startTime + pingTimeout) {
             yield return new WaitForSeconds(0.1f);
         }
 
         if (ping.isDone) {
-            testResults.text = "Network available.";
+            // It is possible for testResults to be destroyed after completing test before this triggers.
+            if (testResults != null) {
+                testResults.text = "Network available.";
+            }
         }
         else {
-            testResults.text = "No network.";
+            // It is possible for testResults to be destroyed after completing test before this triggers.
+            if (testResults != null) {
+                testResults.text = "No network.";
+            }
         }
     }
 

@@ -64,9 +64,17 @@ public class FindingClickHandler : MonoBehaviour {
         switch (destination)
         {
             case Location.core:
+                if (coreDropList == null) {
+                    // References are lost when reloading scenes.  They must be reconnected to avoid breaking scripts.
+                    coreDropList = GameObject.Find("Core Findings").GetComponent<DropListController>();
+                }
                 coreDropList.add(currentFinding);
                 break;
             case Location.extremity:
+                if (extremityDropList == null) {
+                    // References are lost when reloading scenes.  They must be reconnected to avoid breaking scripts.
+                    extremityDropList = GameObject.Find("Extremity Findings").GetComponent<DropListController>();
+                }
                 extremityDropList.add(currentFinding);
                 break;
             default:
