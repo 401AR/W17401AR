@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: fae49353094933f4eb15be670bebc99c
+guid: 8ef77e79f0931814a8b1f74d17f1d6d2
 labels:
 - table
 - sql
@@ -16,6 +16,7 @@ PluginImporter:
   iconMap: {}
   executionOrder: {}
   isPreloaded: 0
+  isOverridable: 0
   platformData:
     Any:
       enabled: 0
