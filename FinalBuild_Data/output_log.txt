@@ -25,7 +25,7 @@ Platform assembly: C:\Users\401AR\Desktop\AR\W17401AR\FinalBuild_Data\Managed\Sy
 Loading C:\Users\401AR\Desktop\AR\W17401AR\FinalBuild_Data\Managed\System.Data.dll into Unity Child Domain
 Platform assembly: C:\Users\401AR\Desktop\AR\W17401AR\FinalBuild_Data\Managed\Vuforia.UnityExtensions.dll (this message is harmless)
 Loading C:\Users\401AR\Desktop\AR\W17401AR\FinalBuild_Data\Managed\Vuforia.UnityExtensions.dll into Unity Child Domain
-- Completed reload, in  0.057 seconds
+- Completed reload, in  0.052 seconds
 Platform assembly: C:\Users\401AR\Desktop\AR\W17401AR\FinalBuild_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\401AR\Desktop\AR\W17401AR\FinalBuild_Data\Managed\System.dll (this message is harmless)
 OnLevelWasLoaded was found on VuforiaAbstractBehaviour
