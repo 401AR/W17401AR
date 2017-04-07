@@ -973,7 +973,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2078999708}
   m_HandleRect: {fileID: 2078999707}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -1188,7 +1188,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   databaseFile: {fileID: 4900000, guid: 8b62cdafe5c74e345b556dc23d94b735, type: 3}
   overrideBasePath: 
-  changeWorkingName: 0
+  changeWorkingName: 1
   workingName: Findings.sqlite
   overwriteIfExists: 0
   debugTrace: 0
