@@ -25,7 +25,7 @@ Platform assembly: C:\Users\401AR\Desktop\AR\W17401AR\FinalBuild_Data\Managed\Sy
 Loading C:\Users\401AR\Desktop\AR\W17401AR\FinalBuild_Data\Managed\System.Data.dll into Unity Child Domain
 Platform assembly: C:\Users\401AR\Desktop\AR\W17401AR\FinalBuild_Data\Managed\Vuforia.UnityExtensions.dll (this message is harmless)
 Loading C:\Users\401AR\Desktop\AR\W17401AR\FinalBuild_Data\Managed\Vuforia.UnityExtensions.dll into Unity Child Domain
-- Completed reload, in  0.052 seconds
+- Completed reload, in  0.238 seconds
 Platform assembly: C:\Users\401AR\Desktop\AR\W17401AR\FinalBuild_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\401AR\Desktop\AR\W17401AR\FinalBuild_Data\Managed\System.dll (this message is harmless)
 OnLevelWasLoaded was found on VuforiaAbstractBehaviour
@@ -45,3 +45,138 @@ desktop: 2560x1440 60Hz; virtual: 2560x1440 at 0,0
 <RI> Initializing input.
 XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
 <RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 1.388674 ms
+Operator
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 1008 -> priority: 1 
+  Thread -> id: 3170 -> priority: 1 
+Starting server...
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Received value: '7777' from Server, Port
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Received value: '172.28.100.5' from Server, IP
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Server running on port: 7777
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Server running on port: 7777
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 4.310797 ms
+Operator
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Trackable BigBabyHead lost
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Trackable BigBabyBody lost
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Parent of RectTransform is being set with parent property. Consider using the SetParent method instead, with the worldPositionStays argument set to false. This will retain local orientation and scale rather than world orientation and scale, which can prevent common UI scaling issues.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Query Results: Row Count = 4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Item added: id = 1, name: Pale Skin, color: {"r":0.99, "g":0.87, "b":0.80, "a":1.0}, texture: 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Item added: id = 3, name: Tanned Skin, color: {"r":0.83, "g":0.70, "b":0.52, "a":1.0}, texture: 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Item added: id = 4, name: Dark Skin, color: {"r":0.65, "g":0.49, "b":0.47, "a":1.0}, texture: 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Item added: id = 5, name: Low Oxygen, color: {"r":0.90, "g":0.93, "b":1.0, "a":1.0}, texture: 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Added finding: Name: Pale Skin Color: {"r":0.99, "g":0.87, "b":0.80, "a":1.0}
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Added finding: Name: Tanned Skin Color: {"r":0.83, "g":0.70, "b":0.52, "a":1.0}
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Added finding: Name: Dark Skin Color: {"r":0.65, "g":0.49, "b":0.47, "a":1.0}
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Added finding: Name: Low Oxygen Color: {"r":0.90, "g":0.93, "b":1.0, "a":1.0}
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Query Results: Row Count = 1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Item added: id = 6, name: Purple Rash, color: 0, texture: Textures/purpleRash
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Added finding: Name: Purple Rash Texture: Textures/purpleRash
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 930.
+Total: 0.616661 ms (FindLiveObjects: 0.041937 ms CreateObjectMapping: 0.024797 ms MarkObjects: 0.533881 ms  DeleteObjects: 0.015316 ms)
+
+Trackable BigBabyBody lost
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Trackable BigBabyHead lost
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Tried to unregister camera which hasn't been registered before
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Tried to unregister camera which hasn't been registered before
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Tried to unregister camera which hasn't been registered before
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Tried to unregister camera which hasn't been registered before
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Tried to unregister camera which hasn't been registered before
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Tried to unregister camera which hasn't been registered before
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Tried to unregister camera which hasn't been registered before
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
