@@ -973,7 +973,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2078999708}
   m_HandleRect: {fileID: 2078999707}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -1186,10 +1186,10 @@ MonoBehaviour:
   m_Script: {fileID: 1705125264, guid: 21c9a3aa50a18ac4fb97c316daf96b83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  databaseFile: {fileID: 4900000, guid: 7fd998a063489cb48baf05074de3583a, type: 3}
+  databaseFile: {fileID: 4900000, guid: 8b62cdafe5c74e345b556dc23d94b735, type: 3}
   overrideBasePath: 
-  changeWorkingName: 0
-  workingName: 
+  changeWorkingName: 1
+  workingName: Findings.sqlite
   overwriteIfExists: 0
   debugTrace: 0
 --- !u!4 &313750458
@@ -2059,7 +2059,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 795575616}
   m_HandleRect: {fileID: 795575615}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
