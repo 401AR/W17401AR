@@ -1188,7 +1188,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   databaseFile: {fileID: 4900000, guid: 8b62cdafe5c74e345b556dc23d94b735, type: 3}
   overrideBasePath: 
-  changeWorkingName: 1
+  changeWorkingName: 0
   workingName: Findings.sqlite
   overwriteIfExists: 0
   debugTrace: 0
